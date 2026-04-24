@@ -27,6 +27,7 @@ export default function Edit({ attributes, setAttributes }) {
     featureItems,
     bg_color,
     title_color,
+    dividerColor,
   } = attributes;
 
   const updateTestimonial = (index, key, value) => {
@@ -75,6 +76,11 @@ export default function Edit({ attributes, setAttributes }) {
                 value: title_color,
                 onChange: (val) => setAttributes({ title_color: val }),
                 label: __("Title Color", "ai-zippy"),
+              },
+              {
+                value: dividerColor,
+                onChange: (val) => setAttributes({ dividerColor: val }),
+                label: __("Bottom Divider Color", "ai-zippy"),
               },
             ]}
           />

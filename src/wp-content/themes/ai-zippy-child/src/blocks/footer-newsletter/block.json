@@ -28,6 +28,10 @@
       "type": "string",
       "default": "#f4efdf"
     },
+    "dividerColor": {
+      "type": "string",
+      "default": "#f4efdf"
+    },
     "hasWave": {
       "type": "boolean",
       "default": true

@@ -7,4 +7,9 @@
 // Example:
 // import "./modules/client-hero.js";
 
-console.log("[ai-zippy-child] loaded");
+import { initHeaderCart } from "./modules/header-cart.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+  initHeaderCart();
+  console.log("[ai-zippy-child] loaded");
+});

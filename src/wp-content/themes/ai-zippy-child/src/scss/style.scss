@@ -11,6 +11,71 @@
 
 @use "@parent-scss/variables" as *;
 
+// Global Container
+.pc-container {
+  max-width: 1300px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 0 40px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 5;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+}
+
+// Global Shape Divider
+.pc-shape-divider {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 10;
+  pointer-events: none;
+  height: 50px;
+
+  svg {
+    position: relative;
+    display: block;
+    width: 100%; // Standard width
+    height: 100%;
+    transform: scaleY(-1); // Default flip for bottom
+
+    @media (max-width: 768px) {
+      width: 150%;
+      left: -25%;
+    }
+  }
+
+  &--bottom {
+    bottom: -1px; // Small overlap to prevent gaps
+  }
+
+  &--top {
+    top: -1px;
+    bottom: auto;
+    svg {
+      transform: none;
+    }
+  }
+}
+
+// Reset WP blocks margin
+[class^="pc-home-"],
+[class^="pc-footer-"],
+.pc-home-community-feedback {
+  width: 100%;
+  position: relative;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 // Add client-specific styles below.
 // Coming Soon Page Styles
 .wp-block-group.has-navy-background-color {

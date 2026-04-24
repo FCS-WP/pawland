@@ -104,6 +104,9 @@ add_action('wp_enqueue_scripts', function (): void {
 
     ai_zippy_child_enqueue_vite('ai-zippy-child',       $base . '/js/child.js');
     ai_zippy_child_enqueue_vite('ai-zippy-child-style', $base . '/scss/style.scss');
+
+    // Enqueue FontAwesome 6
+    wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', [], '6.5.1');
 }, 20);
 
 // =============================================================================
@@ -118,4 +121,11 @@ add_action('init', function (): void {
     foreach (glob($blocks_dir . '/*/block.json') as $block_json) {
         register_block_type(dirname($block_json));
     }
+});
+
+/**
+ * Enqueue assets for the block editor.
+ */
+add_action('enqueue_block_editor_assets', function (): void {
+    wp_enqueue_style('font-awesome-editor', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', [], '6.5.1');
 });

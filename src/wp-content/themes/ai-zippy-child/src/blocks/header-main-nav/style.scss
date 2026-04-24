@@ -1,0 +1,208 @@
+.pc-header-main-nav {
+  padding: 15px 0;
+  position: relative;
+  z-index: 99;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+  .pc-header-main-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  // Brand / Logo
+  .pc-brand {
+    flex-shrink: 0;
+    max-width: 200px;
+
+    @media (max-width: 768px) {
+      max-width: 150px;
+    }
+
+    .pc-logo-link,
+    .pc-logo-box {
+      display: block;
+      img {
+        max-height: 80px;
+        width: auto;
+        display: block;
+
+        @media (max-width: 768px) {
+          max-height: 60px;
+        }
+      }
+    }
+
+    .pc-tagline {
+      font-size: 11px;
+      margin-top: 4px;
+      text-transform: capitalize;
+      letter-spacing: 0.02em;
+      opacity: 0.8;
+      font-weight: 500;
+
+      @media (max-width: 1024px) {
+        display: none; // Hide tagline on mobile/tablet to save space
+      }
+    }
+  }
+
+  // Navigation
+  .pc-main-nav,
+  .pc-nav-placeholder {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    @media (max-width: 1024px) {
+      display: none; // Handle mobile menu elsewhere or with toggle
+    }
+
+    span {
+      font-weight: 500;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .pc-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+
+      li {
+        a {
+          text-decoration: none;
+          color: inherit;
+          font-weight: 500;
+          font-size: 15px;
+          transition: color 0.3s ease;
+          position: relative;
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #2d5a27;
+            transition: width 0.3s ease;
+          }
+
+          &:hover {
+            color: #2d5a27;
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Actions (Icons + Button)
+  .pc-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    @media (max-width: 768px) {
+      gap: 15px;
+    }
+
+    .pc-action-icons {
+      display: flex;
+      gap: 20px;
+
+      @media (max-width: 1024px) {
+        display: none; // Hide extra icons on mobile, keep it clean
+      }
+
+      a,
+      i {
+        color: inherit;
+        font-size: 18px;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+
+        .pc-cart-count {
+          position: absolute;
+          top: -10px;
+          right: -10px;
+          background-color: #2d5a27;
+          color: #fff;
+          font-size: 10px;
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .pc-book-now {
+      .pc-btn-book {
+        display: inline-block;
+        padding: 10px 25px;
+        background-color: #1b2a4a;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        white-space: nowrap;
+
+        @media (max-width: 480px) {
+          padding: 8px 15px;
+          font-size: 12px;
+        }
+
+        &:hover {
+          background-color: #2d5a27;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+
+    // Toggle for mobile
+    .pc-mobile-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      color: inherit;
+
+      @media (max-width: 1024px) {
+        display: flex;
+      }
+
+      span {
+        width: 25px;
+        height: 2px;
+        background-color: currentColor;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}

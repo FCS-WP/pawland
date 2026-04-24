@@ -27,6 +27,7 @@ export default function Edit({ attributes, setAttributes }) {
     faqText,
     faqUrl,
     bgColor,
+    dividerColor,
   } = attributes;
 
   return (
@@ -40,6 +41,11 @@ export default function Edit({ attributes, setAttributes }) {
                 value: bgColor,
                 onChange: (val) => setAttributes({ bgColor: val }),
                 label: __("Background", "ai-zippy"),
+              },
+              {
+                value: dividerColor,
+                onChange: (val) => setAttributes({ dividerColor: val }),
+                label: __("Bottom Divider Color", "ai-zippy"),
               },
             ]}
           />

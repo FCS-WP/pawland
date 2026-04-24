@@ -88,6 +88,10 @@
     "title_color": {
         "type": "string",
         "default": "#1b2a4a"
+    },
+    "dividerColor": {
+        "type": "string",
+        "default": "#f4efdf"
     }
   },
   "textdomain": "ai-zippy",
