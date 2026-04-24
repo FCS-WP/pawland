@@ -1,0 +1,70 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/pc-home-values",
+	"version": "0.1.0",
+	"title": "[Home] Values Section",
+	"category": "ai-zippy",
+	"icon": "index-card",
+	"description": "4-column values section with overlapping icons.",
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"],
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"attributes": {
+		"mainTitle": {
+			"type": "string",
+			"default": "The Pawland Way"
+		},
+		"items": {
+			"type": "array",
+			"default": [
+				{
+					"id": 1,
+					"icon": "",
+					"title": "Pet-Centred Environment",
+					"desc": "Designed for play, comfort, and social interaction."
+				},
+				{
+					"id": 2,
+					"icon": "",
+					"title": "Experiences for Pets & Humans",
+					"desc": "A lifestyle destination built around shared moments."
+				},
+				{
+					"id": 3,
+					"icon": "",
+					"title": "Care You Can Trust",
+					"desc": "Dedicated professionals focused on pet well-being."
+				},
+				{
+					"id": 4,
+					"icon": "",
+					"title": "Curated Quality",
+					"desc": "Quality snacks and essentials for everyday care."
+				}
+			]
+		},
+		"iconBg": {
+			"type": "string",
+			"default": "#284a24"
+		},
+		"iconColor": {
+			"type": "string",
+			"default": "#ffffff"
+		}
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

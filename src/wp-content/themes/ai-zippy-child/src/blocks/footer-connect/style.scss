@@ -1,0 +1,64 @@
+.pc-footer-connect {
+  padding: 40px 0;
+  width: 100%;
+
+  &.alignfull {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .pc-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .pc-connect-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: var(--wp--preset--font-family--heading, serif);
+      font-size: clamp(24px, 4vw, 36px);
+      margin: 0;
+      font-weight: 700;
+    }
+  }
+
+  .pc-connect-info {
+    display: flex;
+    gap: 40px;
+
+    @media (max-width: 575px) {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  .pc-info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+    font-weight: 500;
+
+    i {
+      font-size: 20px;
+    }
+
+    @media (max-width: 767px) {
+      justify-content: center;
+    }
+  }
+}

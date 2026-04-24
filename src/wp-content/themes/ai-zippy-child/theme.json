@@ -4,5 +4,12 @@
 	"settings": {
 		"appearanceTools": true
 	},
+	"customTemplates": [
+		{
+			"name": "coming-soon",
+			"title": "Coming Soon",
+			"postTypes": ["page"]
+		}
+	],
 	"styles": {}
 }

@@ -1,0 +1,95 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/pc-home-experience",
+	"version": "0.1.0",
+	"title": "[Home] Experience Section",
+	"category": "ai-zippy",
+	"icon": "grid-view",
+	"description": "5-column experience section for Pawland homepage.",
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"],
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"attributes": {
+		"mainTitle": {
+			"type": "string",
+			"default": "The Pawland Experience"
+		},
+		"items": {
+			"type": "array",
+			"default": [
+				{
+					"id": 1,
+					"image": "",
+					"icon": "",
+					"title": "Dining",
+					"desc": "Relax in a pet-friendly café space...",
+					"btnText": "View Menu",
+					"btnUrl": "#"
+				},
+				{
+					"id": 2,
+					"image": "",
+					"icon": "",
+					"title": "Grooming",
+					"desc": "Gentle grooming services focused on comfort...",
+					"btnText": "View Services",
+					"btnUrl": "#"
+				},
+				{
+					"id": 3,
+					"image": "",
+					"icon": "",
+					"title": "Boarding",
+					"desc": "Comfortable stays with attentive care...",
+					"btnText": "Enquire Now",
+					"btnUrl": "#"
+				},
+				{
+					"id": 4,
+					"image": "",
+					"icon": "",
+					"title": "Playing",
+					"desc": "A safe space for dogs to swim, socialise...",
+					"btnText": "Explore Play",
+					"btnUrl": "#"
+				},
+				{
+					"id": 5,
+					"image": "",
+					"icon": "",
+					"title": "Shopping",
+					"desc": "Explore a curated selection of pet treats...",
+					"btnText": "Shop Now",
+					"btnUrl": "#"
+				}
+			]
+		},
+		"btnBg": {
+			"type": "string",
+			"default": "#284a24"
+		},
+		"btnColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"dividerColor": {
+			"type": "string",
+			"default": "#ffffff"
+		}
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

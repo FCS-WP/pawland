@@ -12,4 +12,119 @@
 @use "@parent-scss/variables" as *;
 
 // Add client-specific styles below.
-// body { /* custom styles */ }
+// Coming Soon Page Styles
+.wp-block-group.has-navy-background-color {
+  background: linear-gradient(135deg, #1b2a4a 0%, #0d1526 100%);
+
+  h1 {
+    animation: fadeInDown 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  p {
+    animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
+  }
+
+  .pc-coming-soon-brand {
+    text-align: center;
+
+    // Logic: If logo exists, hide title/tagline (WP site-logo block has a class if set)
+    &:has(.wp-block-site-logo img) {
+      .pc-coming-soon-title,
+      .pc-coming-soon-tagline {
+        display: none;
+      }
+    }
+
+    .pc-coming-soon-title {
+      font-family: var(--zippy-font-heading, serif);
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 5px;
+      letter-spacing: -0.01em;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+
+    .pc-coming-soon-tagline {
+      font-family: var(--zippy-font-primary, sans-serif);
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 18px;
+    }
+  }
+
+  .pc-coming-soon-content {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+  }
+
+  .pc-btn-contact {
+    animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.5s both;
+
+    a.wp-block-button__link {
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        filter: brightness(1.1);
+      }
+    }
+  }
+
+  .pc-coming-soon-logo {
+    animation: zoomIn 1s cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: 300px;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+    }
+  }
+
+  .wp-block-social-links {
+    animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.6s both;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

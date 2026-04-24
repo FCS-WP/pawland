@@ -1,0 +1,62 @@
+.pc-home-experience-editor {
+  .pc-home-experience__item {
+    border: 1px dashed #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f9f9f9;
+    margin-bottom: 20px;
+  }
+
+  .pc-home-experience__image-preview {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #eee;
+    background-size: cover;
+    background-position: center;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 15px;
+
+    &:hover {
+      background-color: #e5e5e5;
+    }
+  }
+
+  .pc-home-experience__icon-preview {
+    width: 32px;
+    height: 32px;
+    background: #eee;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .pc-icon-placeholder {
+    font-size: 20px;
+    color: #999;
+  }
+
+  .pc-btn-edit-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .pc-url-input {
+      margin: 0;
+      input {
+        font-size: 11px;
+        padding: 4px 8px;
+      }
+    }
+  }
+}

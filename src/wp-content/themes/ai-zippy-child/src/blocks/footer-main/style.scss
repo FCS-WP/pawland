@@ -1,0 +1,116 @@
+.pc-footer-main {
+  padding: 100px 0 80px;
+  width: 100%;
+
+  &.alignfull {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .pc-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .pc-footer-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr;
+    gap: 80px;
+
+    @media (max-width: 1199px) {
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
+  }
+
+  .pc-footer-brand {
+    .pc-footer-logo {
+      margin-bottom: 30px;
+      img {
+        max-height: 80px;
+        width: auto;
+      }
+    }
+
+    .pc-footer-desc {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #4a4a4a;
+      margin-bottom: 30px;
+      max-width: 400px;
+    }
+
+    .pc-footer-socials {
+      display: flex;
+      gap: 15px;
+
+      .pc-social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #f2cb05; // Brand Yellow
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 18px;
+
+        &:hover {
+          transform: translateY(-3px);
+          filter: brightness(1.1);
+        }
+      }
+    }
+  }
+
+  .pc-footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .pc-footer-col {
+      h4 {
+        font-family: var(--wp--preset--font-family--heading, serif);
+        font-size: 22px;
+        margin-bottom: 25px;
+        font-weight: 700;
+        color: #1b2a4a;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          margin-bottom: 12px;
+
+          a,
+          span {
+            font-size: 16px;
+            color: #1b2a4a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+
+            &:hover {
+              color: #2d5a27;
+            }
+          }
+        }
+      }
+    }
+  }
+}

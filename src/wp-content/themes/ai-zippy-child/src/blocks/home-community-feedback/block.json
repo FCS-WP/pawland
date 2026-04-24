@@ -1,0 +1,98 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ai-zippy/pc-home-community-feedback",
+  "version": "0.1.0",
+  "title": "[Home] Community & Testimonials",
+  "category": "ai-zippy",
+  "icon": "star-filled",
+  "description": "Happy Paws & Community section with testimonials and features.",
+  "supports": {
+    "html": false,
+    "align": ["full"]
+  },
+  "attributes": {
+    "testimonialShortcode": {
+      "type": "string",
+      "default": ""
+    },
+    "feedbackTitle": {
+      "type": "string",
+      "default": "Happy Paws & Owners"
+    },
+    "testimonials": {
+      "type": "array",
+      "default": [
+        {
+          "name": "John Doe",
+          "avatar": "",
+          "rating": 5,
+          "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+        },
+        {
+          "name": "Jane Smith",
+          "avatar": "",
+          "rating": 5,
+          "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+        }
+      ]
+    },
+    "communityTitle": {
+      "type": "string",
+      "default": "Join the Pawland Community"
+    },
+    "communityDesc": {
+      "type": "string",
+      "default": "Become part of the Pawland community and enjoy exclusive experiences designed for pets and their humans. From special perks to priority access, membership brings you closer to everything Pawland has to offer."
+    },
+    "communityBtnText": {
+      "type": "string",
+      "default": "Join The Community"
+    },
+    "communityBtnUrl": {
+      "type": "string",
+      "default": "#"
+    },
+    "featureItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "icon": { "type": "string" },
+          "title": { "type": "string" },
+          "desc": { "type": "string" }
+        }
+      },
+      "default": [
+        {
+          "icon": "",
+          "title": "Member Perks",
+          "desc": "Exclusive discounts and rewards"
+        },
+        {
+          "icon": "",
+          "title": "Priority Access",
+          "desc": "Early access to Pawland experiences"
+        },
+        {
+          "icon": "",
+          "title": "Community Experiences",
+          "desc": "Events and activities for pets & owners"
+        }
+      ]
+    },
+    "bg_color": {
+        "type": "string",
+        "default": "#f4efdf"
+    },
+    "title_color": {
+        "type": "string",
+        "default": "#1b2a4a"
+    }
+  },
+  "textdomain": "ai-zippy",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

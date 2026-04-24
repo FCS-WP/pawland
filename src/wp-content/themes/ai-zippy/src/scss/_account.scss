@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "sass:color";
 
 // =============================================================================
 // My Account — AI Zippy
@@ -6,9 +7,9 @@
 // =============================================================================
 
 // ---- SHARED TOKENS ----
-$ma-card-bg:     #f8f8fa;
-$ma-sidebar-w:   260px;
-$ma-gap:         1.5rem;
+$ma-card-bg: #f8f8fa;
+$ma-sidebar-w: 260px;
+$ma-gap: 1.5rem;
 
 // ---- LAYOUT ----
 .woocommerce-MyAccount-content,
@@ -64,7 +65,7 @@ $ma-gap:         1.5rem;
   align-items: center;
   gap: 0.85rem;
   padding: 1.25rem 1rem;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .ma__nav-avatar {
@@ -123,7 +124,7 @@ $ma-gap:         1.5rem;
 
 .ma__nav-item {
   &--logout {
-    border-top: 1px solid rgba(0,0,0,0.06);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
     margin-top: 0.35rem;
     padding-top: 0.35rem;
 
@@ -151,7 +152,7 @@ $ma-gap:         1.5rem;
   position: relative;
 
   &:hover {
-    background: rgba(0,0,0,0.04);
+    background: rgba(0, 0, 0, 0.04);
     color: $c-primary;
   }
 
@@ -166,7 +167,7 @@ $ma-gap:         1.5rem;
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 0;
@@ -278,12 +279,24 @@ $ma-gap:         1.5rem;
 
   // WC status colours
   &--pending,
-  &--on-hold       { background: rgba(255,107,0,0.1); color: #e65c00; }
-  &--processing    { background: rgba(33,150,243,0.1); color: #1976d2; }
-  &--completed     { background: rgba(76,175,80,0.1);  color: #388e3c; }
+  &--on-hold {
+    background: rgba(255, 107, 0, 0.1);
+    color: #e65c00;
+  }
+  &--processing {
+    background: rgba(33, 150, 243, 0.1);
+    color: #1976d2;
+  }
+  &--completed {
+    background: rgba(76, 175, 80, 0.1);
+    color: #388e3c;
+  }
   &--cancelled,
   &--failed,
-  &--refunded      { background: rgba(229,57,53,0.1); color: $c-danger; }
+  &--refunded {
+    background: rgba(229, 57, 53, 0.1);
+    color: $c-danger;
+  }
 
   &--lg {
     font-size: 0.78rem;
@@ -343,13 +356,13 @@ $ma-gap:         1.5rem;
   }
 
   .ma__btn--outline {
-    border-color: rgba(255,255,255,0.35);
+    border-color: rgba(255, 255, 255, 0.35);
     color: $c-white;
     flex-shrink: 0;
 
     &:hover {
       border-color: $c-white;
-      background: rgba(255,255,255,0.08);
+      background: rgba(255, 255, 255, 0.08);
     }
   }
 }
@@ -395,9 +408,18 @@ $ma-gap:         1.5rem;
   justify-content: center;
   flex-shrink: 0;
 
-  &--orders { background: rgba(33,150,243,0.1); color: #1976d2; }
-  &--spent  { background: rgba(76,175,80,0.1);  color: #388e3c; }
-  &--last   { background: rgba(200,169,126,0.15); color: darken(#c8a97e, 10%); }
+  &--orders {
+    background: rgba(33, 150, 243, 0.1);
+    color: #1976d2;
+  }
+  &--spent {
+    background: rgba(76, 175, 80, 0.1);
+    color: #388e3c;
+  }
+  &--last {
+    background: rgba(200, 169, 126, 0.15);
+    color: color.adjust(#c8a97e, $lightness: -10%);
+  }
 }
 
 .ma__dash-stat-body {
@@ -431,7 +453,7 @@ $ma-gap:         1.5rem;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1.25rem;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .ma__dash-section-title {
@@ -450,7 +472,9 @@ $ma-gap:         1.5rem;
   color: $c-accent;
   text-decoration: none;
 
-  &:hover { text-decoration: underline; }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .ma__dash-empty {
@@ -486,10 +510,12 @@ $ma-gap:         1.5rem;
   padding: 0.85rem 1.25rem;
   @include transition(background);
 
-  &:hover { background: rgba(0,0,0,0.02); }
+  &:hover {
+    background: rgba(0, 0, 0, 0.02);
+  }
 
   + .ma__order-card {
-    border-top: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
 }
 
@@ -501,7 +527,7 @@ $ma-gap:         1.5rem;
   border-radius: 8px;
   overflow: hidden;
   background: #fff;
-  border: 1px solid rgba(0,0,0,0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 
   img {
     width: 48px !important;
@@ -615,7 +641,9 @@ $ma-gap:         1.5rem;
   margin-left: -8px;
   flex-shrink: 0;
 
-  &:first-child { margin-left: 0; }
+  &:first-child {
+    margin-left: 0;
+  }
 
   img {
     width: 44px !important;
@@ -661,7 +689,9 @@ $ma-gap:         1.5rem;
   color: $c-primary;
   text-decoration: none;
 
-  &:hover { color: $c-accent; }
+  &:hover {
+    color: $c-accent;
+  }
 }
 
 .ma__order-details {
@@ -724,7 +754,7 @@ $ma-gap:         1.5rem;
 
   &:hover {
     border-color: $c-primary;
-    background: rgba(0,0,0,0.02);
+    background: rgba(0, 0, 0, 0.02);
   }
 }
 
@@ -751,7 +781,9 @@ $ma-gap:         1.5rem;
   margin-bottom: 0.25rem;
   @include transition(color);
 
-  &:hover { color: $c-primary; }
+  &:hover {
+    color: $c-primary;
+  }
 }
 
 .ma__vo-header {
@@ -789,7 +821,9 @@ $ma-gap:         1.5rem;
   color: $c-primary;
   margin: 0 0 1rem;
 
-  svg { color: $c-muted; }
+  svg {
+    color: $c-muted;
+  }
 }
 
 .ma__vo-notes {
@@ -820,12 +854,14 @@ $ma-gap:         1.5rem;
   color: $c-primary;
   line-height: 1.5;
 
-  p { margin: 0; }
+  p {
+    margin: 0;
+  }
 }
 
 // View-order items
 .ma__vo-items {
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   padding-bottom: 0.75rem;
   margin-bottom: 0.75rem;
 }
@@ -837,7 +873,7 @@ $ma-gap:         1.5rem;
   padding: 0.65rem 0;
 
   + .ma__vo-item {
-    border-top: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
 }
 
@@ -848,7 +884,7 @@ $ma-gap:         1.5rem;
   border-radius: 8px;
   overflow: hidden;
   background: #fff;
-  border: 1px solid rgba(0,0,0,0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 
   img {
     width: 56px !important;
@@ -903,18 +939,23 @@ $ma-gap:         1.5rem;
   font-size: 0.85rem;
   color: $c-primary;
 
-  &--discount { color: #388e3c; }
+  &--discount {
+    color: #388e3c;
+  }
 
   &--total {
     font-size: 1rem;
     font-weight: 700;
     padding-top: 0.65rem;
     margin-top: 0.35rem;
-    border-top: 1px solid rgba(0,0,0,0.06);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
   }
 }
 
-.ma__free { color: #388e3c; font-weight: 600; }
+.ma__free {
+  color: #388e3c;
+  font-weight: 600;
+}
 
 // Addresses in view-order
 .ma__vo-addresses {
@@ -934,7 +975,8 @@ $ma-gap:         1.5rem;
 }
 
 .ma__vo-address-block {
-  address, span {
+  address,
+  span {
     font-size: 0.82rem;
     color: $c-primary;
     font-style: normal;
@@ -1029,12 +1071,20 @@ $ma-gap:         1.5rem;
 .ma__auth-panel {
   animation: maFadeIn 0.25s ease-out;
 
-  &[hidden] { display: none; }
+  &[hidden] {
+    display: none;
+  }
 }
 
 @keyframes maFadeIn {
-  from { opacity: 0; transform: translateY(6px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .ma__login-header {
@@ -1102,7 +1152,7 @@ $ma-gap:         1.5rem;
   }
 
   &:hover {
-    border-color: darken(#e5e5e5, 8%);
+    border-color: color.adjust(#e5e5e5, $lightness: -8%);
   }
 
   &:focus {
@@ -1198,7 +1248,9 @@ $ma-gap:         1.5rem;
   text-decoration: none;
   font-weight: 600;
 
-  &:hover { text-decoration: underline; }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 // Large primary button variant
@@ -1225,7 +1277,9 @@ $ma-gap:         1.5rem;
   text-decoration: none;
   cursor: pointer;
 
-  &:hover { text-decoration: underline; }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .ma__hint {
@@ -1259,8 +1313,16 @@ $ma-gap:         1.5rem;
   line-height: 1.5;
   margin: 0.25rem 0 0;
 
-  p { margin: 0; }
-  a { color: $c-accent; text-decoration: none; &:hover { text-decoration: underline; } }
+  p {
+    margin: 0;
+  }
+  a {
+    color: $c-accent;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 // =============================================================================
@@ -1296,10 +1358,11 @@ $ma-gap:         1.5rem;
   font-size: 0.85rem;
 
   thead tr {
-    border-bottom: 1px solid rgba(0,0,0,0.07);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
   }
 
-  th, td {
+  th,
+  td {
     padding: 0.6rem 0;
     color: $c-primary;
     text-align: left;
@@ -1329,7 +1392,9 @@ $ma-gap:         1.5rem;
       color: $c-primary;
       text-decoration: none;
 
-      &:hover { color: $c-accent; }
+      &:hover {
+        color: $c-accent;
+      }
     }
   }
 
@@ -1343,14 +1408,16 @@ $ma-gap:         1.5rem;
     height: 48px !important;
     object-fit: cover;
     border-radius: 8px;
-    border: 1px solid rgba(0,0,0,0.06);
+    border: 1px solid rgba(0, 0, 0, 0.06);
     display: block;
   }
 
   tbody tr {
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
-    &:last-child { border-bottom: none; }
+    &:last-child {
+      border-bottom: none;
+    }
   }
 
   // Variation meta inside item row
@@ -1361,16 +1428,25 @@ $ma-gap:         1.5rem;
     font-size: 0.72rem;
     color: $c-muted;
 
-    li { display: inline; }
-    li + li::before { content: ', '; }
+    li {
+      display: inline;
+    }
+    li + li::before {
+      content: ", ";
+    }
 
-    strong { font-weight: 600; }
-    p { display: inline; margin: 0; }
+    strong {
+      font-weight: 600;
+    }
+    p {
+      display: inline;
+      margin: 0;
+    }
   }
 
   // Tfoot totals rows
   tfoot {
-    border-top: 1px solid rgba(0,0,0,0.07);
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
 
     tr th {
       font-size: 0.82rem;
@@ -1411,7 +1487,7 @@ $ma-gap:         1.5rem;
 
     &:hover {
       border-color: $c-primary;
-      background: rgba(0,0,0,0.02);
+      background: rgba(0, 0, 0, 0.02);
     }
   }
 }
@@ -1454,7 +1530,7 @@ $ma-gap:         1.5rem;
   gap: 0.4rem;
 
   &::before {
-    content: '';
+    content: "";
     display: inline-block;
     width: 14px;
     height: 14px;
@@ -1499,13 +1575,16 @@ $ma-gap:         1.5rem;
   padding: 1.25rem;
   @include transition(box-shadow);
 
-  &:hover { box-shadow: $box-shadow; }
+  &:hover {
+    box-shadow: $box-shadow;
+  }
 
   &--empty {
-    border: 2px dashed rgba(0,0,0,0.1);
+    border: 2px dashed rgba(0, 0, 0, 0.1);
     background: transparent;
 
-    address, .ma__addr-empty-text {
+    address,
+    .ma__addr-empty-text {
       color: $c-muted;
     }
   }
@@ -1525,7 +1604,7 @@ $ma-gap:         1.5rem;
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  background: rgba(200,169,126,0.15);
+  background: rgba(200, 169, 126, 0.15);
   color: $c-accent;
   flex-shrink: 0;
 }
@@ -1557,7 +1636,7 @@ $ma-gap:         1.5rem;
 .ma__addr-card-footer {
   margin-top: 1rem;
   padding-top: 0.85rem;
-  border-top: 1px solid rgba(0,0,0,0.06);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 // =============================================================================
@@ -1584,7 +1663,9 @@ $ma-gap:         1.5rem;
   color: $c-primary;
   margin: 0 0 0.25rem;
 
-  svg { color: $c-accent; }
+  svg {
+    color: $c-accent;
+  }
 }
 
 .ma__form-card-sub {
@@ -1691,7 +1772,7 @@ $ma-gap:         1.5rem;
       &:focus {
         outline: none !important;
         border-color: $c-primary !important;
-        box-shadow: 0 0 0 3px rgba(0,0,0,0.05) !important;
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05) !important;
       }
     }
 
@@ -1723,7 +1804,9 @@ $ma-gap:         1.5rem;
   }
 
   // WC's .clear divs — kill them, grid handles wrapping
-  > .clear { display: none; }
+  > .clear {
+    display: none;
+  }
 }
 
 // =============================================================================
@@ -1743,7 +1826,9 @@ $ma-gap:         1.5rem;
 
   .ma__nav {
     // Horizontal scroll nav on mobile
-    .ma__nav-user { display: none; }
+    .ma__nav-user {
+      display: none;
+    }
 
     .ma__nav-list {
       display: flex;
@@ -1751,7 +1836,9 @@ $ma-gap:         1.5rem;
       padding: 0.35rem 0.5rem;
       gap: 0.25rem;
 
-      &::-webkit-scrollbar { display: none; }
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
 
     .ma__nav-item--logout {
@@ -1770,7 +1857,9 @@ $ma-gap:         1.5rem;
     font-size: 0.72rem;
     border-radius: $border-radius;
 
-    &::before { display: none !important; }
+    &::before {
+      display: none !important;
+    }
   }
 
   .ma__nav-label {
@@ -1787,7 +1876,7 @@ $ma-gap:         1.5rem;
     align-items: center;
     justify-content: space-between;
     padding-top: 0.65rem;
-    border-top: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   .ma__vo-addresses {

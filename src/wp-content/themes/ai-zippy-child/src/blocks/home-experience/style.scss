@@ -1,0 +1,154 @@
+.pc-home-experience {
+  padding: 80px 0 120px;
+  position: relative;
+  width: 100%;
+  margin: 0 !important; // Remove default block gaps
+
+  &.alignfull {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .pc-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 5;
+  }
+
+  // Support for Gutenberg color settings
+  &.has-background {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  &__main-title {
+    text-align: center;
+    font-family: var(--wp--preset--font-family--heading, serif);
+    font-size: clamp(28px, 4vw, 40px);
+    margin-bottom: 60px;
+    color: inherit;
+    font-weight: 700;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 24px;
+    border-radius: 40px; // Large rounded corners as per mockup
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__item-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+  }
+
+  &__icon-wrapper {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__item-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    color: inherit;
+  }
+
+  &__item-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    color: inherit;
+    opacity: 0.8;
+  }
+
+  &__item-footer {
+    margin-top: auto; // Push button to bottom
+  }
+
+  .pc-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+  }
+
+  // Shape Divider Style
+  .pc-shape-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 10; // Higher z-index
+    pointer-events: none;
+
+    svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 50px;
+      transform: scaleY(-1);
+
+      @media (max-width: 768px) {
+        height: 25px;
+        width: 150%;
+        left: -25%;
+      }
+    }
+  }
+}

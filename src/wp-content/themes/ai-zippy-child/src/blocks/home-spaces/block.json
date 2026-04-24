@@ -1,0 +1,47 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/pc-home-spaces",
+	"version": "0.1.0",
+	"title": "[Home] Spaces Section",
+	"category": "ai-zippy",
+	"icon": "layout",
+	"description": "Featured spaces grid section.",
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"],
+		"color": {
+			"background": true,
+			"text": true
+		}
+	},
+	"attributes": {
+		"mainTitle": {
+			"type": "string",
+			"default": "Pawland Spaces"
+		},
+		"mainDesc": {
+			"type": "string",
+			"default": "Designed for comfort, play, and connection..."
+		},
+		"items": {
+			"type": "array",
+			"default": [
+				{ "id": 1, "image": "", "title": "Dog Pool", "desc": "A refreshing space...", "btnText": "Explore Dog Pool", "btnUrl": "#" },
+				{ "id": 2, "image": "", "title": "Play & Social Area", "desc": "An open and welcoming...", "btnText": "Discover Play Area", "btnUrl": "#" },
+				{ "id": 3, "image": "", "title": "Pawland Café", "desc": "A pet-friendly café space...", "btnText": "View Café Menu", "btnUrl": "#" },
+				{ "id": 4, "image": "", "title": "Pet Retail Store", "desc": "Browse a curated selection...", "btnText": "Browse Pet Store", "btnUrl": "#" },
+				{ "id": 5, "image": "", "title": "Training Space", "desc": "A dedicated area for...", "btnText": "View Training Services", "btnUrl": "#" }
+			]
+		},
+		"dividerColor": {
+			"type": "string",
+			"default": "#ffffff"
+		}
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

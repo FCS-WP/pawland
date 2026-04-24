@@ -1,0 +1,83 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/pc-home-hero",
+	"version": "1.0.0",
+	"title": "[Home] Hero Section",
+	"category": "ai-zippy",
+	"icon": "cover-image",
+	"description": "The first section of the homepage with a heading, description, CTA buttons, and illustration.",
+	"keywords": ["home", "hero", "pawland", "banner"],
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"],
+		"color": {
+			"background": true,
+			"text": true,
+			"link": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"attributes": {
+		"heading": {
+			"type": "string",
+			"default": "A Lifestyle Space Designed for Pets & Humans"
+		},
+		"description": {
+			"type": "string",
+			"default": "A space where pets and their humans can spend quality time together."
+		},
+		"primaryBtnText": {
+			"type": "string",
+			"default": "Explore Pawland"
+		},
+		"primaryBtnUrl": {
+			"type": "string",
+			"default": "#"
+		},
+		"secondaryBtnText": {
+			"type": "string",
+			"default": "View Pet Services"
+		},
+		"secondaryBtnUrl": {
+			"type": "string",
+			"default": "#"
+		},
+		"mediaId": {
+			"type": "number",
+			"default": 0
+		},
+		"mediaUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"primaryBtnBg": {
+			"type": "string",
+			"default": "#284a24"
+		},
+		"primaryBtnColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"secondaryBtnBg": {
+			"type": "string",
+			"default": "transparent"
+		},
+		"secondaryBtnColor": {
+			"type": "string",
+			"default": "#1b2a4a"
+		},
+		"dividerColor": {
+			"type": "string",
+			"default": "#ffffff"
+		}
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

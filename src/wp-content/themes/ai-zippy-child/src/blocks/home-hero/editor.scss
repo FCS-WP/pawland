@@ -1,0 +1,60 @@
+.pc-home-hero-editor {
+  background-color: #f2ecd9;
+  padding: 60px 40px;
+  border-radius: 8px;
+
+  .pc-home-hero__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .pc-home-hero__welcome {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #1b2a4a;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .pc-home-hero__heading {
+    font-size: 48px;
+    line-height: 1.1;
+    color: #1b2a4a;
+    margin-bottom: 24px;
+    font-weight: 700;
+  }
+
+  .pc-home-hero__description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4a4a4a;
+    margin-bottom: 40px;
+  }
+
+  .pc-home-hero__actions {
+    display: flex;
+    gap: 16px;
+  }
+
+  .pc-home-hero__image-placeholder {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 2px dashed rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

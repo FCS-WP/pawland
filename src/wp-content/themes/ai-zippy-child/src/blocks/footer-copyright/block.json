@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ai-zippy/pc-footer-copyright",
+  "version": "0.1.0",
+  "title": "[Footer] Copyright",
+  "category": "ai-zippy",
+  "icon": "shield",
+  "description": "Copyright text bar for the footer.",
+  "supports": {
+    "html": false,
+    "align": ["full"]
+  },
+  "attributes": {
+    "text": {
+      "type": "string",
+      "default": "Copyright © 2026 Pawland Club. All rights reserved."
+    },
+    "bgColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#000000"
+    }
+  },
+  "textdomain": "ai-zippy",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./style-index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
