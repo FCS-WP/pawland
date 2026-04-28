@@ -70,6 +70,14 @@ async function handleClick(e) {
  * then fire the WC blocks event so the mini cart drawer logic runs too.
  */
 function updateMiniCart(cart) {
+	// 0. Update classic header count
+	const countElements = document.querySelectorAll(".pc-cart-count");
+	if (countElements.length > 0) {
+		countElements.forEach((el) => {
+			el.textContent = cart.items_count;
+		});
+	}
+
 	// 1. Push cart response into the WC blocks cart store.
 	//    The mini cart subscribes to getCartData() and re-renders on change.
 	try {

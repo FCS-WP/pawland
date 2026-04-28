@@ -1,0 +1,47 @@
+.wp-block-ai-zippy-child-page-hero {
+    &.page-hero {
+        background: #2d5a27;
+        color: #fff;
+        padding: 4rem 2rem;
+        border-radius: 40px;
+        text-align: center;
+        margin: 2rem;
+        position: relative;
+        overflow: hidden;
+
+        .page-hero__decoration {
+            position: absolute;
+            top: -10%;
+            right: -5%;
+            opacity: 0.1;
+            pointer-events: none;
+            color: #fff;
+            
+            svg {
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        h1 {
+            font-family: var(--wp--preset--font-family--heading);
+            font-size: 3rem;
+            margin: 0;
+            color: #fff;
+        }
+
+        .page-hero__sep {
+            width: 60px;
+            height: 3px;
+            background: #fff;
+            margin: 1.5rem auto;
+            opacity: 0.3;
+        }
+
+        .page-hero__desc {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+    }
+}

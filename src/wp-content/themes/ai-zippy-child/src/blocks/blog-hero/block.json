@@ -1,0 +1,35 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/pc-blog-hero",
+	"version": "1.0.0",
+	"title": "[Blog] Hero Section",
+	"category": "ai-zippy",
+	"icon": "art",
+	"description": "Header section for the blog with title and main image.",
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Life at Pawland"
+		},
+		"image": {
+			"type": "string",
+			"default": ""
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#F5F2EA"
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./editor.scss",
+	"style": "file:./style.scss",
+	"render": "file:./render.php"
+}

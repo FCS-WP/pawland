@@ -40,7 +40,7 @@
   }
 
   &__heading {
-    font-family: var(--wp--preset--font-family--heading, serif);
+    font-family: var(--zippy-font-heading, var(--wp--preset--font-family--heading, serif));
     font-size: clamp(32px, 5vw, 64px);
     line-height: 1.1;
     color: inherit;

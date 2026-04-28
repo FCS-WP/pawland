@@ -1,0 +1,175 @@
+.pc-contact-get-in-touch {
+    width: 100%;
+    padding: 100px 0;
+    background-color: #ffffff;
+    position: relative;
+
+    &.alignfull {
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
+
+    &__heading {
+        font-family: var(--zippy-font-heading, var(--wp--preset--font-family--outfit, 'Outfit', sans-serif));
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        font-weight: 800;
+        color: #1b2a4a;
+        margin-bottom: 25px;
+        text-align: center;
+        letter-spacing: -0.02em;
+    }
+
+    &__description {
+        font-family: var(--zippy-font-primary, inherit);
+        max-width: 700px;
+        margin: 0 auto 70px;
+        text-align: center;
+        font-size: 1.15rem;
+        line-height: 1.7;
+        color: #64748b;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .pc-contact-info-item {
+        text-align: left;
+        padding: 45px;
+        background: #f8fafc;
+        border-radius: 28px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 1px solid rgba(226, 232, 240, 0.6);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &:hover {
+            background: #ffffff;
+            border-color: #284a24;
+            box-shadow: 0 20px 60px rgba(40, 74, 36, 0.08);
+            transform: translateY(-8px);
+            
+            .pc-info-icon {
+                background: #1a3318;
+                transform: scale(1.15) rotate(10deg);
+            }
+        }
+
+        .pc-info-icon {
+            width: 70px;
+            height: 70px;
+            background: #284a24;
+            color: #fff;
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 25px rgba(40, 74, 36, 0.25);
+        }
+
+        h4 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #1b2a4a;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        div {
+            font-size: 1.1rem;
+            color: #475569;
+            line-height: 1.7;
+
+            a {
+                color: #284a24;
+                font-weight: 600;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                border-bottom: 2px solid transparent;
+
+                &:hover {
+                    border-bottom-color: #284a24;
+                }
+            }
+        }
+    }
+
+    &__social-wrapper {
+        margin-top: 20px;
+        padding-left: 10px;
+    }
+
+    &__social {
+        display: flex;
+        gap: 15px;
+
+        .social-icon {
+            width: 54px;
+            height: 54px;
+            border-radius: 18px;
+            background: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1b2a4a;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            font-size: 1.3rem;
+
+            &:hover {
+                background-color: #284a24;
+                color: #fff;
+                transform: scale(1.15) translateY(-5px);
+                box-shadow: 0 10px 20px rgba(40, 74, 36, 0.15);
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .pc-contact-get-in-touch {
+        &__grid {
+            gap: 40px;
+        }
+        .pc-contact-info-item {
+            padding: 35px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .pc-contact-get-in-touch {
+        padding: 80px 0;
+        &__grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        &__social-wrapper {
+            padding-left: 0;
+            display: flex;
+            justify-content: center;
+        }
+        &__heading {
+            font-size: 2rem;
+        }
+    }
+}

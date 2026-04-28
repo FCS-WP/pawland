@@ -238,6 +238,11 @@ class Typography
             'application/x-font-ttf', 'application/x-font-otf',
             'application/vnd.ms-opentype',
             'application/octet-stream',
+            'application/font-sfnt',
+            'font/sfnt',
+            'application/x-font-truetype',
+            'font/truetype',
+            'font/opentype',
         ];
         if (!in_array($mime, $allowed_mimes, true)) {
             throw new \RuntimeException(__('File does not appear to be a valid font.', 'ai-zippy'));

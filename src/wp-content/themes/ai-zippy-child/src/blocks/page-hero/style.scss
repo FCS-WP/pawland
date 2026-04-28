@@ -1,0 +1,14 @@
+.wp-block-ai-zippy-child-page-hero {
+    &.page-hero {
+        // Most styles are inline for consistency with the user's manual design,
+        // but we add some base block styles here.
+        
+        h1 {
+            color: inherit;
+        }
+
+        .page-hero__desc {
+            color: inherit;
+        }
+    }
+}

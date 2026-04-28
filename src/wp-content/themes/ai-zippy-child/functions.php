@@ -11,6 +11,9 @@
 
 defined('ABSPATH') || exit;
 
+// Custom Contact Form Logic
+require_once get_stylesheet_directory() . '/src/inc/contact-form.php';
+
 // =============================================================================
 // Vite manifest reader — child's own assets/dist/.vite/manifest.json
 // Mirrors the parent's AiZippy\Core\ViteAssets but scoped to this theme.
@@ -128,4 +131,16 @@ add_action('init', function (): void {
  */
 add_action('enqueue_block_editor_assets', function (): void {
     wp_enqueue_style('font-awesome-editor', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', [], '6.5.1');
+});
+
+/**
+ * Update cart fragments for header cart count.
+ */
+add_filter('woocommerce_add_to_cart_fragments', function ($fragments) {
+    ob_start();
+    ?>
+    <span class="pc-cart-count"><?php echo function_exists('WC') && WC()->cart ? WC()->cart->get_cart_contents_count() : 0; ?></span>
+    <?php
+    $fragments['.pc-cart-count'] = ob_get_clean();
+    return $fragments;
 });

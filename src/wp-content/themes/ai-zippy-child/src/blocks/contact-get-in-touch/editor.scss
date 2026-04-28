@@ -1,0 +1,17 @@
+.pc-contact-get-in-touch-editor {
+    .pc-contact-get-in-touch__heading,
+    .pc-contact-get-in-touch__description {
+        text-align: center;
+    }
+
+    .pc-contact-info-item {
+        h4 {
+            border: 1px dashed transparent;
+            &:hover { border-color: #ccc; }
+        }
+        div {
+            border: 1px dashed transparent;
+            &:hover { border-color: #ccc; }
+        }
+    }
+}

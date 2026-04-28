@@ -1,0 +1,28 @@
+.pc-contact-map-editor {
+    .pc-contact-map__preview {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        overflow: hidden;
+
+        .map-label {
+            padding: 10px;
+            background: #edf2f7;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        iframe {
+            max-width: 100%;
+            height: 200px !important; // Smaller preview in editor
+        }
+    }
+
+    .pc-contact-map__placeholder {
+        padding: 40px;
+        border: 2px dashed #e2e8f0;
+        border-radius: 10px;
+        text-align: center;
+        color: #718096;
+    }
+}

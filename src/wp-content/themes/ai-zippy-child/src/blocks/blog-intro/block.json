@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/pc-blog-intro",
+	"version": "1.0.0",
+	"title": "[Blog] Intro Section",
+	"category": "ai-zippy",
+	"icon": "editor-aligncenter",
+	"description": "Introductory text section for the blog.",
+	"attributes": {
+		"heading": {
+			"type": "string",
+			"default": "Stories, tips, and insights for pet lovers."
+		},
+		"desc1": {
+			"type": "string",
+			"default": "Explore helpful guides, dog care tips, training insights, and lifestyle stories designed to help you and your furry companion enjoy life together."
+		},
+		"desc2": {
+			"type": "string",
+			"default": "From playtime ideas and training advice to pet-friendly experiences, the Pawland Journal shares moments, knowledge, and inspiration for every pet owner."
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "transparent"
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./editor.scss",
+	"style": "file:./style.scss",
+	"render": "file:./render.php"
+}

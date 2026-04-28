@@ -2,7 +2,54 @@
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
 	"settings": {
-		"appearanceTools": true
+		"appearanceTools": true,
+		"color": {
+			"palette": [
+				{
+					"slug": "primary",
+					"color": "#2d5a27",
+					"name": "Brand Green"
+				},
+				{
+					"slug": "secondary",
+					"color": "#F5F2EA",
+					"name": "Brand Beige"
+				},
+				{
+					"slug": "accent",
+					"color": "#E89A3E",
+					"name": "Brand Accent"
+				},
+				{
+					"slug": "white",
+					"color": "#ffffff",
+					"name": "White"
+				}
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "\"DM Serif Display\", serif",
+					"slug": "heading",
+					"name": "Heading Font"
+				},
+				{
+					"fontFamily": "\"Inter\", sans-serif",
+					"slug": "body",
+					"name": "Body Font"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--white)",
+			"text": "var(--wp--preset--color--primary)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--body)"
+		}
 	},
 	"customTemplates": [
 		{
@@ -10,6 +57,5 @@
 			"title": "Coming Soon",
 			"postTypes": ["page"]
 		}
-	],
-	"styles": {}
+	]
 }

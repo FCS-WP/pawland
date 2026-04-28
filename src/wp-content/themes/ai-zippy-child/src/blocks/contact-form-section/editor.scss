@@ -1,0 +1,39 @@
+.pc-contact-form-section-editor {
+    .pc-form-placeholder {
+        background: #f8fafc;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid #e2e8f0;
+
+        .shortcode-preview {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #edf2f7;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        .mock-form {
+            .mock-input {
+                background: #fff;
+                padding: 10px;
+                border: 1px solid #e2e8f0;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                color: #a0aec0;
+                font-size: 0.9rem;
+            }
+            .mock-textarea {
+                height: 80px;
+            }
+            .mock-button {
+                background: #284a24;
+                color: #fff;
+                padding: 10px 20px;
+                border-radius: 20px;
+                display: inline-block;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}

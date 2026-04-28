@@ -39,15 +39,34 @@ $wrapper_attributes = get_block_wrapper_attributes([
 
             <nav class="pc-main-nav">
                 <?php
-                if (has_nav_menu('primary')) {
-                    wp_nav_menu([
-                        'theme_location' => 'primary',
-                        'container' => false,
-                        'menu_class' => 'pc-menu',
-                        'fallback_cb' => false,
-                    ]);
-                } else {
-                    echo '<ul class="pc-menu"><li><a href="#">Home</a></li><li><a href="#">About</a></li><li><a href="#">Pet Services</a></li></ul>';
+                $rendered = false;
+
+                // Try Navigation Block posts (from the Site Editor)
+                $nav_posts = get_posts([
+                    'post_type'   => 'wp_navigation',
+                    'post_status' => 'publish',
+                    'posts_per_page' => 1,
+                    'orderby' => 'date',
+                    'order' => 'DESC'
+                ]);
+
+                if (!empty($nav_posts)) {
+                    echo '<ul class="pc-menu">';
+                    $blocks = parse_blocks($nav_posts[0]->post_content);
+                    foreach ($blocks as $block) {
+                        if ($block['blockName'] === 'core/navigation-link') {
+                            $label = $block['attrs']['label'] ?? '';
+                            $url = $block['attrs']['url'] ?? '';
+                            echo '<li><a href="' . esc_url($url) . '">' . esc_html($label) . '</a></li>';
+                        }
+                    }
+                    echo '</ul>';
+                    $rendered = true;
+                }
+
+                // Ultimate fallback if no navigation found in editor
+                if (!$rendered) {
+                    echo '<ul class="pc-menu"><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li><a href="/shop/">Shop</a></li></ul>';
                 }
                 ?>
             </nav>
@@ -65,9 +84,7 @@ $wrapper_attributes = get_block_wrapper_attributes([
                     <?php if ($showCart): ?>
                         <a href="<?php echo function_exists('wc_get_cart_url') ? esc_url(wc_get_cart_url()) : '#'; ?>" class="pc-icon-cart">
                             <i class="fas fa-shopping-cart"></i>
-                            <?php if (function_exists('WC') && WC()->cart): ?>
-                                <span class="pc-cart-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
-                            <?php endif; ?>
+                            <span class="pc-cart-count"><?php echo function_exists('WC') && WC()->cart ? WC()->cart->get_cart_contents_count() : 0; ?></span>
                         </a>
                     <?php endif; ?>
 
@@ -93,5 +110,8 @@ $wrapper_attributes = get_block_wrapper_attributes([
                 </button>
             </div>
         </div>
+    </div>
+    <div style="display:none">
+        <?php echo do_blocks('<!-- wp:woocommerce/mini-cart /-->'); ?>
     </div>
 </div>
