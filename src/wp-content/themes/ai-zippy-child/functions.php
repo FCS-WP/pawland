@@ -11,8 +11,14 @@
 
 defined('ABSPATH') || exit;
 
+// Database Logic
+require_once get_stylesheet_directory() . '/src/inc/database.php';
+
 // Custom Contact Form Logic
 require_once get_stylesheet_directory() . '/src/inc/contact-form.php';
+
+// Newsletter Logic
+require_once get_stylesheet_directory() . '/src/inc/newsletter.php';
 
 // =============================================================================
 // Vite manifest reader — child's own assets/dist/.vite/manifest.json

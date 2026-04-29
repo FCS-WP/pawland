@@ -126,4 +126,33 @@
       }
     }
   }
+
+  .pc-newsletter-response {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    
+    p {
+      margin: 0;
+      padding: 10px 15px;
+      border-radius: 8px;
+    }
+    
+    &.is-success p {
+      background: rgba(var(--wp--preset--color--success-rgb, 76, 175, 80), 0.1);
+      color: var(--wp--preset--color--success, #2e7d32);
+      border: 1px solid rgba(76, 175, 80, 0.2);
+    }
+    
+    &.is-error p {
+      background: rgba(var(--wp--preset--color--error-rgb, 244, 67, 54), 0.1);
+      color: var(--wp--preset--color--error, #d32f2f);
+      border: 1px solid rgba(244, 67, 54, 0.2);
+    }
+    
+    &.is-loading p {
+      color: #666;
+      font-style: italic;
+    }
+  }
 }
