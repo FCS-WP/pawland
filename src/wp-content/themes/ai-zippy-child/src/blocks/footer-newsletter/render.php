@@ -15,6 +15,20 @@ $wrapper_attributes = get_block_wrapper_attributes([
     'class' => 'pc-footer-newsletter',
     'style' => 'background-color: ' . $bgColor . ';'
 ]);
+
+// Localize for AJAX
+if (!wp_script_is('zippy-newsletter-init', 'done')) {
+    add_action('wp_footer', function() {
+        ?>
+        <script id="zippy-newsletter-init">
+            var zippyNewsletterData = {
+                ajaxUrl: '<?php echo admin_url('admin-ajax.php'); ?>',
+                nonce: '<?php echo wp_create_nonce('zippy_newsletter_nonce'); ?>'
+            };
+        </script>
+        <?php
+    });
+}
 ?>
 
 <div <?php echo $wrapper_attributes; ?>>

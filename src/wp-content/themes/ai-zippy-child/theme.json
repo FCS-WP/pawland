@@ -24,6 +24,11 @@
 					"slug": "white",
 					"color": "#ffffff",
 					"name": "White"
+				},
+				{
+					"slug": "success",
+					"color": "#4caf50",
+					"name": "Success"
 				}
 			]
 		},

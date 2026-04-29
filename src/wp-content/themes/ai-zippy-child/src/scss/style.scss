@@ -259,3 +259,20 @@ body {
     }
   }
 }
+
+// Shop Filter & Add to Cart states
+.sf__card-btn,
+.ps__card-btn,
+[data-product-id],
+a[href*="add-to-cart"] {
+  &.is-added {
+    background-color: var(--wp--preset--color--success, #4caf50) !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    
+    // Ensure SVG (check icon) is also white
+    svg {
+      stroke: #ffffff !important;
+    }
+  }
+}
