@@ -46,7 +46,9 @@
       height: 50px;
 
       @media (max-width: 768px) {
-        height: 40px;
+        height: 60px;
+        width: 150%;
+        left: -25%;
       }
     }
 
