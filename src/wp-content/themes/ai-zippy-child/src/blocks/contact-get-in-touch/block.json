@@ -2,15 +2,23 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "ai-zippy/contact-get-in-touch",
-	"version": "1.0.0",
+	"version": "1.0.3",
 	"title": "[Contact Us] Get In Touch",
 	"category": "ai-zippy",
 	"icon": "phone",
 	"description": "Section with contact information and social media links.",
-	"keywords": ["contact", "info", "address", "social"],
+	"keywords": [
+		"contact",
+		"info",
+		"address",
+		"social"
+	],
 	"supports": {
 		"html": false,
-		"align": ["wide", "full"],
+		"align": [
+			"wide",
+			"full"
+		],
 		"spacing": {
 			"margin": true,
 			"padding": true
@@ -30,18 +38,54 @@
 			"type": "string",
 			"default": "We'd love to hear from you. Whether you're planning a visit, exploring our pet experiences, or have questions about Pawland, our team is here to help."
 		},
-		"addressLabel": { "type": "string", "default": "Store Address" },
-		"address": { "type": "string", "default": "Pawland Club\nSingapore" },
-		"phoneLabel": { "type": "string", "default": "Phone" },
-		"phone": { "type": "string", "default": "+65 8086 4548\n(WhatsApp available)" },
-		"hoursLabel": { "type": "string", "default": "Opening Hours" },
-		"hours": { "type": "string", "default": "Monday - Sunday\n10:00am - 10:00pm\nHours may vary on public holidays" },
-		"emailLabel": { "type": "string", "default": "Email" },
-		"email": { "type": "string", "default": "hello@pawlandclub.com" },
-		"instagramUrl": { "type": "string", "default": "https://www.instagram.com/pawlandclub/" },
-		"tiktokUrl": { "type": "string", "default": "https://www.tiktok.com/@pawlandclub" },
-		"facebookUrl": { "type": "string", "default": "https://www.facebook.com/profile.php?id=61587605425316" },
-		"xhsUrl": { "type": "string", "default": "https://xhslink.com/m/AccyHID5inN" }
+		"addressLabel": {
+			"type": "string",
+			"default": "Store Address"
+		},
+		"address": {
+			"type": "string",
+			"default": "Pawland Club\nSingapore"
+		},
+		"phoneLabel": {
+			"type": "string",
+			"default": "Phone"
+		},
+		"phone": {
+			"type": "string",
+			"default": "+65 8086 4548\n(WhatsApp available)"
+		},
+		"hoursLabel": {
+			"type": "string",
+			"default": "Opening Hours"
+		},
+		"hours": {
+			"type": "string",
+			"default": "Monday - Sunday\n10:00am - 10:00pm\nHours may vary on public holidays"
+		},
+		"emailLabel": {
+			"type": "string",
+			"default": "Email"
+		},
+		"email": {
+			"type": "string",
+			"default": "hello@pawlandclub.com"
+		},
+		"instagramUrl": {
+			"type": "string",
+			"default": "https://www.instagram.com/pawlandclub/"
+		},
+		"tiktokUrl": {
+			"type": "string",
+			"default": "https://www.tiktok.com/@pawlandclub"
+		},
+		"facebookUrl": {
+			"type": "string",
+			"default": "https://www.facebook.com/profile.php?id=61587605425316"
+		},
+		"xhsUrl": {
+			"type": "string",
+			"default": "https://xhslink.com/m/AccyHID5inN"
+		}
 	},
 	"textdomain": "ai-zippy",
 	"editorScript": "file:./index.js",

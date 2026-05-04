@@ -28,7 +28,7 @@ $wrapper_attributes = get_block_wrapper_attributes([
 <div <?php echo $wrapper_attributes; ?>>
     <div class="pc-blog-posts-grid__inner" style="max-width: 1200px; margin: 0 auto;">
         <?php if ($query->have_posts()): ?>
-            <div class="pc-blog-posts-grid__items" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem;">
+            <div class="pc-blog-posts-grid__items">
                 <?php while ($query->have_posts()): $query->the_post(); 
                     $post_id = get_the_ID();
                     $thumbnail = get_the_post_thumbnail_url($post_id, 'large') ?: 'https://via.placeholder.com/600x400?text=No+Image';

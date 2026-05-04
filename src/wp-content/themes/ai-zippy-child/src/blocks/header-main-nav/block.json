@@ -1,63 +1,64 @@
 {
-  "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 3,
-  "name": "ai-zippy/pc-header-main-nav",
-  "version": "0.1.0",
-  "title": "[Header] Main Navigation",
-  "category": "ai-zippy",
-  "icon": "navigation",
-  "description": "Main header with logo, navigation, and book button",
-  "supports": {
-    "html": false,
-    "anchor": true
-  },
-  "attributes": {
-    "logoId": {
-      "type": "number"
-    },
-    "logoUrl": {
-      "type": "string"
-    },
-    "tagline": {
-      "type": "string",
-      "default": "A Community Designed for Pets & Humans"
-    },
-    "bookNowText": {
-      "type": "string",
-      "default": "Book Now"
-    },
-    "bookNowUrl": {
-      "type": "string",
-      "default": "/booking/"
-    },
-    "bgColor": {
-      "type": "string",
-      "default": "#f4efdf"
-    },
-    "textColor": {
-      "type": "string",
-      "default": "#1b2a4a"
-    },
-    "showSearch": {
-      "type": "boolean",
-      "default": true
-    },
-    "showWishlist": {
-      "type": "boolean",
-      "default": true
-    },
-    "showCart": {
-      "type": "boolean",
-      "default": true
-    },
-    "showUser": {
-      "type": "boolean",
-      "default": true
-    }
-  },
-  "textdomain": "ai-zippy",
-  "editorScript": "file:./index.js",
-  "editorStyle": "file:./style-index.css",
-  "style": "file:./style-index.css",
-  "render": "file:./render.php"
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/pc-header-main-nav",
+	"version": "0.1.3",
+	"title": "[Header] Main Navigation",
+	"category": "ai-zippy",
+	"icon": "navigation",
+	"description": "Main header with logo, navigation, and book button",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"logoId": {
+			"type": "number"
+		},
+		"logoUrl": {
+			"type": "string"
+		},
+		"tagline": {
+			"type": "string",
+			"default": "A Community Designed for Pets & Humans"
+		},
+		"bookNowText": {
+			"type": "string",
+			"default": "Book Now"
+		},
+		"bookNowUrl": {
+			"type": "string",
+			"default": "/booking/"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#f4efdf"
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#1b2a4a"
+		},
+		"showSearch": {
+			"type": "boolean",
+			"default": true
+		},
+		"showWishlist": {
+			"type": "boolean",
+			"default": true
+		},
+		"showCart": {
+			"type": "boolean",
+			"default": true
+		},
+		"showUser": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"viewScript": "file:./view.js",
+	"editorStyle": "file:./style-index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
 }

@@ -1,46 +1,48 @@
 {
-  "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 3,
-  "name": "ai-zippy/pc-footer-newsletter",
-  "version": "0.1.0",
-  "title": "[Footer] Newsletter",
-  "category": "ai-zippy",
-  "icon": "email",
-  "description": "Newsletter subscription section for the footer.",
-  "supports": {
-    "html": false,
-    "align": ["full"]
-  },
-  "attributes": {
-    "title": {
-      "type": "string",
-      "default": "Join the Pawland Community"
-    },
-    "subtitle": {
-      "type": "string",
-      "default": "Be the first to hear about Pawland updates, new experiences, and special events for pets and their humans."
-    },
-    "placeholder": {
-      "type": "string",
-      "default": "Your email"
-    },
-    "bgColor": {
-      "type": "string",
-      "default": "#f4efdf"
-    },
-    "dividerColor": {
-      "type": "string",
-      "default": "#f4efdf"
-    },
-    "hasWave": {
-      "type": "boolean",
-      "default": true
-    }
-  },
-  "textdomain": "ai-zippy",
-  "editorScript": "file:./index.js",
-  "viewScript": "file:./view.js",
-  "editorStyle": "file:./style-index.css",
-  "style": "file:./style-index.css",
-  "render": "file:./render.php"
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/pc-footer-newsletter",
+	"version": "0.1.3",
+	"title": "[Footer] Newsletter",
+	"category": "ai-zippy",
+	"icon": "email",
+	"description": "Newsletter subscription section for the footer.",
+	"supports": {
+		"html": false,
+		"align": [
+			"full"
+		]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Join the Pawland Community"
+		},
+		"subtitle": {
+			"type": "string",
+			"default": "Be the first to hear about Pawland updates, new experiences, and special events for pets and their humans."
+		},
+		"placeholder": {
+			"type": "string",
+			"default": "Your email"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#f4efdf"
+		},
+		"dividerColor": {
+			"type": "string",
+			"default": "#f4efdf"
+		},
+		"hasWave": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"viewScript": "file:./view.js",
+	"editorStyle": "file:./style-index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
 }

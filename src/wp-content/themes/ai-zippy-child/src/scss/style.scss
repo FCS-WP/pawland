@@ -21,11 +21,17 @@
   --wp--preset--font-family--primary: var(--zippy-font-primary, sans-serif);
 }
 
-html, body {
+html,
+body {
   font-family: var(--zippy-font-primary, inherit);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--zippy-font-heading, inherit);
 }
 
@@ -54,11 +60,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0;
   z-index: 10;
   pointer-events: none;
-  height: 50px;
-
-  @media (max-width: 768px) {
-    height: auto;
-  }
+  height: auto;
 
   svg {
     position: relative;
@@ -243,20 +245,22 @@ body {
     text-align: center;
 
     // Target the query title (h1)
-    h1, .wp-block-query-title {
+    h1,
+    .wp-block-query-title {
       font-size: 4rem !important;
       line-height: 1.1 !important;
-      
+
       @media (max-width: 768px) {
         font-size: 2.5rem !important;
       }
     }
 
     // Target the description
-    p, .wp-block-term-description {
+    p,
+    .wp-block-term-description {
       font-size: 1.2rem !important;
       line-height: 1.8 !important;
-      
+
       @media (max-width: 768px) {
         font-size: 1rem !important;
       }
@@ -273,7 +277,7 @@ a[href*="add-to-cart"] {
     background-color: var(--wp--preset--color--success, #4caf50) !important;
     color: #ffffff !important;
     opacity: 1 !important;
-    
+
     // Ensure SVG (check icon) is also white
     svg {
       stroke: #ffffff !important;

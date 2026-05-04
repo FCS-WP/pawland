@@ -58,7 +58,19 @@
     gap: 20px;
 
     @media (max-width: 1024px) {
-      display: none; // Handle mobile menu elsewhere or with toggle
+      display: none; 
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #f4efdf; 
+      padding: 30px 20px;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
     }
 
     span {
@@ -75,6 +87,13 @@
       justify-content: center;
       gap: 25px;
 
+      @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+      }
+
       li {
         a {
           text-decoration: none;
@@ -83,6 +102,12 @@
           font-size: 15px;
           transition: color 0.3s ease;
           position: relative;
+
+          @media (max-width: 1024px) {
+            font-size: 18px;
+            padding: 5px 0;
+            display: block;
+          }
 
           &:after {
             content: "";
@@ -93,6 +118,10 @@
             height: 2px;
             background-color: #2d5a27;
             transition: width 0.3s ease;
+
+            @media (max-width: 1024px) {
+              display: none;
+            }
           }
 
           &:hover {
@@ -186,23 +215,63 @@
     .pc-mobile-toggle {
       display: none;
       flex-direction: column;
+      justify-content: center;
       gap: 5px;
       background: none;
       border: none;
       cursor: pointer;
       padding: 0;
       color: inherit;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      z-index: 101;
 
       @media (max-width: 1024px) {
         display: flex;
       }
 
       span {
+        display: block;
         width: 25px;
         height: 2px;
         background-color: currentColor;
         transition: all 0.3s ease;
+        transform-origin: center;
       }
     }
+  }
+
+  // Handle Open State at Root
+  &.mobile-menu-open {
+    .pc-main-nav {
+      @media (max-width: 1024px) {
+        display: flex !important;
+        animation: pcSlideDown 0.3s ease-out forwards;
+      }
+    }
+
+    .pc-mobile-toggle {
+      span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+@keyframes pcSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

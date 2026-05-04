@@ -2,52 +2,149 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "ai-zippy/pc-home-spaces-way",
-	"version": "0.1.0",
+	"version": "0.1.3",
 	"title": "[Home] Spaces & Way Combined",
 	"category": "ai-zippy",
 	"icon": "layout",
 	"description": "Combined section for Spaces and Values with top/bottom curves.",
 	"supports": {
 		"html": false,
-		"align": ["wide", "full"],
+		"align": [
+			"wide",
+			"full"
+		],
 		"color": {
 			"background": true,
 			"text": true
 		}
 	},
 	"attributes": {
-		"spacesTitle": { "type": "string", "default": "Pawland Spaces" },
-		"spacesDesc": { "type": "string", "default": "Designed for comfort, play, and connection..." },
+		"spacesTitle": {
+			"type": "string",
+			"default": "Pawland Spaces"
+		},
+		"spacesDesc": {
+			"type": "string",
+			"default": "Designed for comfort, play, and connection..."
+		},
 		"spacesItems": {
 			"type": "array",
 			"default": [
-				{ "id": 1, "image": "", "title": "Dog Pool", "desc": "A refreshing space...", "btnText": "Explore Dog Pool", "btnUrl": "#" },
-				{ "id": 2, "image": "", "title": "Play & Social Area", "desc": "An open and welcoming...", "btnText": "Discover Play Area", "btnUrl": "#" },
-				{ "id": 3, "image": "", "title": "Pawland Café", "desc": "A pet-friendly café space...", "btnText": "View Café Menu", "btnUrl": "#" },
-				{ "id": 4, "image": "", "title": "Pet Retail Store", "desc": "Browse a curated selection...", "btnText": "Browse Pet Store", "btnUrl": "#" },
-				{ "id": 5, "image": "", "title": "Training Space", "desc": "A dedicated area for...", "btnText": "View Training Services", "btnUrl": "#" }
+				{
+					"id": 1,
+					"image": "",
+					"title": "Dog Pool",
+					"desc": "A refreshing space...",
+					"btnText": "Explore Dog Pool",
+					"btnUrl": "#"
+				},
+				{
+					"id": 2,
+					"image": "",
+					"title": "Play & Social Area",
+					"desc": "An open and welcoming...",
+					"btnText": "Discover Play Area",
+					"btnUrl": "#"
+				},
+				{
+					"id": 3,
+					"image": "",
+					"title": "Pawland Café",
+					"desc": "A pet-friendly café space...",
+					"btnText": "View Café Menu",
+					"btnUrl": "#"
+				},
+				{
+					"id": 4,
+					"image": "",
+					"title": "Pet Retail Store",
+					"desc": "Browse a curated selection...",
+					"btnText": "Browse Pet Store",
+					"btnUrl": "#"
+				},
+				{
+					"id": 5,
+					"image": "",
+					"title": "Training Space",
+					"desc": "A dedicated area for...",
+					"btnText": "View Training Services",
+					"btnUrl": "#"
+				}
 			]
 		},
-		"wayTitle": { "type": "string", "default": "The Pawland Way" },
+		"wayTitle": {
+			"type": "string",
+			"default": "The Pawland Way"
+		},
 		"wayItems": {
 			"type": "array",
 			"default": [
-				{ "id": 1, "icon": "", "title": "Pet-Centred Environment", "desc": "Designed for play, comfort, and social interaction." },
-				{ "id": 2, "icon": "", "title": "Experiences for Pets & Humans", "desc": "A lifestyle destination built around shared moments." },
-				{ "id": 3, "icon": "", "title": "Care You Can Trust", "desc": "Dedicated professionals focused on pet well-being." },
-				{ "id": 4, "icon": "", "title": "Curated Quality", "desc": "Quality snacks and essentials for everyday care." }
+				{
+					"id": 1,
+					"icon": "",
+					"title": "Pet-Centred Environment",
+					"desc": "Designed for play, comfort, and social interaction."
+				},
+				{
+					"id": 2,
+					"icon": "",
+					"title": "Experiences for Pets & Humans",
+					"desc": "A lifestyle destination built around shared moments."
+				},
+				{
+					"id": 3,
+					"icon": "",
+					"title": "Care You Can Trust",
+					"desc": "Dedicated professionals focused on pet well-being."
+				},
+				{
+					"id": 4,
+					"icon": "",
+					"title": "Curated Quality",
+					"desc": "Quality snacks and essentials for everyday care."
+				}
 			]
 		},
-		"topDividerColor": { "type": "string", "default": "#ffffff" },
-		"bottomDividerColor": { "type": "string", "default": "#ffffff" },
-		"iconBg": { "type": "string", "default": "#284a24" },
-		"iconColor": { "type": "string", "default": "#ffffff" },
-		"spacesTitleColor": { "type": "string", "default": "#1b2a4a" },
-		"spacesItemTitleColor": { "type": "string", "default": "#1b2a4a" },
-		"spacesItemDescColor": { "type": "string", "default": "#4a4a4a" },
-		"wayTitleColor": { "type": "string", "default": "#1b2a4a" },
-		"wayItemTitleColor": { "type": "string", "default": "#1b2a4a" },
-		"wayItemDescColor": { "type": "string", "default": "#4a4a4a" }
+		"topDividerColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"bottomDividerColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"iconBg": {
+			"type": "string",
+			"default": "#284a24"
+		},
+		"iconColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"spacesTitleColor": {
+			"type": "string",
+			"default": "#1b2a4a"
+		},
+		"spacesItemTitleColor": {
+			"type": "string",
+			"default": "#1b2a4a"
+		},
+		"spacesItemDescColor": {
+			"type": "string",
+			"default": "#4a4a4a"
+		},
+		"wayTitleColor": {
+			"type": "string",
+			"default": "#1b2a4a"
+		},
+		"wayItemTitleColor": {
+			"type": "string",
+			"default": "#1b2a4a"
+		},
+		"wayItemDescColor": {
+			"type": "string",
+			"default": "#4a4a4a"
+		}
 	},
 	"textdomain": "ai-zippy",
 	"editorScript": "file:./index.js",

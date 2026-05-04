@@ -103,7 +103,7 @@ $wrapper_attributes = get_block_wrapper_attributes([
                 <?php endif; ?>
 
                 <!-- Mobile Toggle -->
-                <button class="pc-mobile-toggle">
+                <button class="pc-mobile-toggle" aria-label="Toggle navigation" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>

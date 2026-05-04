@@ -1,97 +1,99 @@
 {
-  "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 3,
-  "name": "ai-zippy/pc-footer-plan-visit",
-  "version": "0.1.0",
-  "title": "[Footer] Plan Your Visit",
-  "category": "ai-zippy",
-  "icon": "location-alt",
-  "description": "Footer section with map, opening hours, and contact buttons.",
-  "supports": {
-    "html": false,
-    "align": ["full"]
-  },
-  "attributes": {
-    "title": {
-      "type": "string",
-      "default": "Plan Your Visit to Pawland"
-    },
-    "description": {
-      "type": "string",
-      "default": "Pawland is a welcoming lifestyle space where pets can play, relax, and enjoy quality time with their humans. Drop by to explore our dog pool, play areas, training services, café, and retail store all in one place."
-    },
-    "locationName": {
-      "type": "string",
-      "default": "Pawland Club"
-    },
-    "address": {
-      "type": "string",
-      "default": "Singapore"
-    },
-    "openingHoursTitle": {
-      "type": "string",
-      "default": "Opening Hours"
-    },
-    "openingHours": {
-      "type": "string",
-      "default": "10:00am – 10:00pm"
-    },
-    "openingHoursNote": {
-      "type": "string",
-      "default": "Hours may vary on public holidays"
-    },
-    "parkingTitle": {
-      "type": "string",
-      "default": "Parking"
-    },
-    "parkingDesc": {
-      "type": "string",
-      "default": "Private property parking is available"
-    },
-    "parkingNote": {
-      "type": "string",
-      "default": "*Please inform our staff before parking."
-    },
-    "mapIframe": {
-      "type": "string",
-      "default": ""
-    },
-    "whatsappText": {
-      "type": "string",
-      "default": "Whatsapp Us"
-    },
-    "whatsappUrl": {
-      "type": "string",
-      "default": "#"
-    },
-    "callText": {
-      "type": "string",
-      "default": "Call Us"
-    },
-    "callUrl": {
-      "type": "string",
-      "default": "#"
-    },
-    "faqText": {
-      "type": "string",
-      "default": "View FAQs"
-    },
-    "faqUrl": {
-      "type": "string",
-      "default": "#"
-    },
-    "bgColor": {
-      "type": "string",
-      "default": "#f4efdf"
-    },
-    "dividerColor": {
-      "type": "string",
-      "default": "#f4efdf"
-    }
-  },
-  "textdomain": "ai-zippy",
-  "editorScript": "file:./index.js",
-  "editorStyle": "file:./style-index.css",
-  "style": "file:./style-index.css",
-  "render": "file:./render.php"
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/pc-footer-plan-visit",
+	"version": "0.1.3",
+	"title": "[Footer] Plan Your Visit",
+	"category": "ai-zippy",
+	"icon": "location-alt",
+	"description": "Footer section with map, opening hours, and contact buttons.",
+	"supports": {
+		"html": false,
+		"align": [
+			"full"
+		]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Plan Your Visit to Pawland"
+		},
+		"description": {
+			"type": "string",
+			"default": "Pawland is a welcoming lifestyle space where pets can play, relax, and enjoy quality time with their humans. Drop by to explore our dog pool, play areas, training services, café, and retail store all in one place."
+		},
+		"locationName": {
+			"type": "string",
+			"default": "Pawland Club"
+		},
+		"address": {
+			"type": "string",
+			"default": "Singapore"
+		},
+		"openingHoursTitle": {
+			"type": "string",
+			"default": "Opening Hours"
+		},
+		"openingHours": {
+			"type": "string",
+			"default": "10:00am – 10:00pm"
+		},
+		"openingHoursNote": {
+			"type": "string",
+			"default": "Hours may vary on public holidays"
+		},
+		"parkingTitle": {
+			"type": "string",
+			"default": "Parking"
+		},
+		"parkingDesc": {
+			"type": "string",
+			"default": "Private property parking is available"
+		},
+		"parkingNote": {
+			"type": "string",
+			"default": "*Please inform our staff before parking."
+		},
+		"mapIframe": {
+			"type": "string",
+			"default": ""
+		},
+		"whatsappText": {
+			"type": "string",
+			"default": "Whatsapp Us"
+		},
+		"whatsappUrl": {
+			"type": "string",
+			"default": "#"
+		},
+		"callText": {
+			"type": "string",
+			"default": "Call Us"
+		},
+		"callUrl": {
+			"type": "string",
+			"default": "#"
+		},
+		"faqText": {
+			"type": "string",
+			"default": "View FAQs"
+		},
+		"faqUrl": {
+			"type": "string",
+			"default": "#"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#f4efdf"
+		},
+		"dividerColor": {
+			"type": "string",
+			"default": "#f4efdf"
+		}
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./style-index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
 }

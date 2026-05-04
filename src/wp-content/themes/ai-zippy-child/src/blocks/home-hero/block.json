@@ -2,15 +2,23 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "ai-zippy/pc-home-hero",
-	"version": "1.0.0",
+	"version": "1.0.3",
 	"title": "[Home] Hero Section",
 	"category": "ai-zippy",
 	"icon": "cover-image",
 	"description": "The first section of the homepage with a heading, description, CTA buttons, and illustration.",
-	"keywords": ["home", "hero", "pawland", "banner"],
+	"keywords": [
+		"home",
+		"hero",
+		"pawland",
+		"banner"
+	],
 	"supports": {
 		"html": false,
-		"align": ["wide", "full"],
+		"align": [
+			"wide",
+			"full"
+		],
 		"color": {
 			"background": true,
 			"text": true,

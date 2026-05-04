@@ -1,74 +1,124 @@
 {
-  "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 3,
-  "name": "ai-zippy/pc-footer-main",
-  "version": "0.1.0",
-  "title": "[Footer] Main Content",
-  "category": "ai-zippy",
-  "icon": "layout",
-  "description": "Main footer section with logo, descriptions, and link columns.",
-  "supports": {
-    "html": false,
-    "align": ["full"]
-  },
-  "attributes": {
-    "logo": {
-      "type": "string",
-      "default": ""
-    },
-    "siteDesc": {
-      "type": "string",
-      "default": "A pet lifestyle destination where dogs can play, relax, and connect with their humans. Pawland brings together experiences, care, and community under one welcoming space."
-    },
-    "socials": {
-      "type": "array",
-      "default": [
-        { "icon": "fab fa-facebook-f", "url": "#" },
-        { "icon": "fab fa-instagram", "url": "#" },
-        { "icon": "fab fa-tiktok", "url": "#" }
-      ]
-    },
-    "columns": {
-      "type": "array",
-      "default": [
-        {
-          "title": "Explore",
-          "links": [
-            { "text": "Home", "url": "/" },
-            { "text": "About Pawland", "url": "/about" },
-            { "text": "Pet Services", "url": "/services" },
-            { "text": "Retail Store", "url": "/retail" },
-            { "text": "Café Menu", "url": "/cafe" },
-            { "text": "Journal", "url": "/journal" },
-            { "text": "Contact Us", "url": "/contact" }
-          ]
-        },
-        {
-          "title": "Visit Pawland",
-          "links": [
-            { "text": "Pawland Club Singapore", "url": "#" },
-            { "text": "Operating Hours Monday – Sunday 10:00am – 10:00pm", "url": "#" }
-          ]
-        },
-        {
-          "title": "Resources",
-          "links": [
-            { "text": "FAQs", "url": "/faqs" },
-            { "text": "Membership", "url": "/membership" },
-            { "text": "Privacy Policy", "url": "/privacy-policy" },
-            { "text": "Terms & Conditions", "url": "/terms-conditions" }
-          ]
-        }
-      ]
-    },
-    "bgColor": {
-      "type": "string",
-      "default": "#ffffff"
-    }
-  },
-  "textdomain": "ai-zippy",
-  "editorScript": "file:./index.js",
-  "editorStyle": "file:./style-index.css",
-  "style": "file:./style-index.css",
-  "render": "file:./render.php"
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/pc-footer-main",
+	"version": "0.1.3",
+	"title": "[Footer] Main Content",
+	"category": "ai-zippy",
+	"icon": "layout",
+	"description": "Main footer section with logo, descriptions, and link columns.",
+	"supports": {
+		"html": false,
+		"align": [
+			"full"
+		]
+	},
+	"attributes": {
+		"logo": {
+			"type": "string",
+			"default": ""
+		},
+		"siteDesc": {
+			"type": "string",
+			"default": "A pet lifestyle destination where dogs can play, relax, and connect with their humans. Pawland brings together experiences, care, and community under one welcoming space."
+		},
+		"socials": {
+			"type": "array",
+			"default": [
+				{
+					"icon": "fab fa-facebook-f",
+					"url": "#"
+				},
+				{
+					"icon": "fab fa-instagram",
+					"url": "#"
+				},
+				{
+					"icon": "fab fa-tiktok",
+					"url": "#"
+				}
+			]
+		},
+		"columns": {
+			"type": "array",
+			"default": [
+				{
+					"title": "Explore",
+					"links": [
+						{
+							"text": "Home",
+							"url": "/"
+						},
+						{
+							"text": "About Pawland",
+							"url": "/about"
+						},
+						{
+							"text": "Pet Services",
+							"url": "/services"
+						},
+						{
+							"text": "Retail Store",
+							"url": "/retail"
+						},
+						{
+							"text": "Café Menu",
+							"url": "/cafe"
+						},
+						{
+							"text": "Journal",
+							"url": "/journal"
+						},
+						{
+							"text": "Contact Us",
+							"url": "/contact"
+						}
+					]
+				},
+				{
+					"title": "Visit Pawland",
+					"links": [
+						{
+							"text": "Pawland Club Singapore",
+							"url": "#"
+						},
+						{
+							"text": "Operating Hours Monday – Sunday 10:00am – 10:00pm",
+							"url": "#"
+						}
+					]
+				},
+				{
+					"title": "Resources",
+					"links": [
+						{
+							"text": "FAQs",
+							"url": "/faqs"
+						},
+						{
+							"text": "Membership",
+							"url": "/membership"
+						},
+						{
+							"text": "Privacy Policy",
+							"url": "/privacy-policy"
+						},
+						{
+							"text": "Terms & Conditions",
+							"url": "/terms-conditions"
+						}
+					]
+				}
+			]
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#ffffff"
+		}
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./style-index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
 }

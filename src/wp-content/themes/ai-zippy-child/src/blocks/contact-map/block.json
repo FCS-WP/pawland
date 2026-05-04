@@ -2,15 +2,22 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "ai-zippy/contact-map",
-	"version": "1.0.0",
+	"version": "1.0.3",
 	"title": "[Contact Us] Map",
 	"category": "ai-zippy",
 	"icon": "location-alt",
 	"description": "Google Maps section for the contact page.",
-	"keywords": ["contact", "map", "google maps"],
+	"keywords": [
+		"contact",
+		"map",
+		"google maps"
+	],
 	"supports": {
 		"html": false,
-		"align": ["wide", "full"],
+		"align": [
+			"wide",
+			"full"
+		],
 		"spacing": {
 			"margin": true,
 			"padding": true

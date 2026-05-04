@@ -1,41 +1,43 @@
 {
-  "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 3,
-  "name": "ai-zippy/pc-footer-connect",
-  "version": "0.1.0",
-  "title": "[Footer] Connect Bar",
-  "category": "ai-zippy",
-  "icon": "phone",
-  "description": "Green footer bar with contact information.",
-  "supports": {
-    "html": false,
-    "align": ["full"]
-  },
-  "attributes": {
-    "title": {
-      "type": "string",
-      "default": "Connect With Us"
-    },
-    "phone": {
-      "type": "string",
-      "default": "+65 9388 3136"
-    },
-    "email": {
-      "type": "string",
-      "default": "hello@pawlandclub.com"
-    },
-    "bgColor": {
-      "type": "string",
-      "default": "#2d5a27"
-    },
-    "textColor": {
-      "type": "string",
-      "default": "#ffffff"
-    }
-  },
-  "textdomain": "ai-zippy",
-  "editorScript": "file:./index.js",
-  "editorStyle": "file:./style-index.css",
-  "style": "file:./style-index.css",
-  "render": "file:./render.php"
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/pc-footer-connect",
+	"version": "0.1.3",
+	"title": "[Footer] Connect Bar",
+	"category": "ai-zippy",
+	"icon": "phone",
+	"description": "Green footer bar with contact information.",
+	"supports": {
+		"html": false,
+		"align": [
+			"full"
+		]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Connect With Us"
+		},
+		"phone": {
+			"type": "string",
+			"default": "+65 9388 3136"
+		},
+		"email": {
+			"type": "string",
+			"default": "hello@pawlandclub.com"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#2d5a27"
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#ffffff"
+		}
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./style-index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
 }

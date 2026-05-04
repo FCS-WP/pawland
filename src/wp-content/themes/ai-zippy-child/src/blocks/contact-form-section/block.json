@@ -2,15 +2,22 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "ai-zippy/contact-form-section",
-	"version": "1.0.0",
+	"version": "1.0.3",
 	"title": "[Contact Us] Contact Form",
 	"category": "ai-zippy",
 	"icon": "email",
 	"description": "Section with text on the left and a contact form on the right.",
-	"keywords": ["contact", "form", "message"],
+	"keywords": [
+		"contact",
+		"form",
+		"message"
+	],
 	"supports": {
 		"html": false,
-		"align": ["wide", "full"],
+		"align": [
+			"wide",
+			"full"
+		],
 		"spacing": {
 			"margin": true,
 			"padding": true

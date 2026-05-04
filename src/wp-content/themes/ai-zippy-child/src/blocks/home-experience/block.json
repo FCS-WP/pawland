@@ -2,14 +2,17 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "ai-zippy/pc-home-experience",
-	"version": "0.1.0",
+	"version": "0.1.3",
 	"title": "[Home] Experience Section",
 	"category": "ai-zippy",
 	"icon": "grid-view",
 	"description": "5-column experience section for Pawland homepage.",
 	"supports": {
 		"html": false,
-		"align": ["wide", "full"],
+		"align": [
+			"wide",
+			"full"
+		],
 		"color": {
 			"background": true,
 			"text": true
