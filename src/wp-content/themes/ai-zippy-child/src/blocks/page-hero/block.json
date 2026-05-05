@@ -2,7 +2,7 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "ai-zippy/pc-page-hero",
-	"version": "1.0.4",
+	"version": "1.0.7",
 	"title": "[Page] Hero Section",
 	"category": "ai-zippy",
 	"icon": "cover-image",

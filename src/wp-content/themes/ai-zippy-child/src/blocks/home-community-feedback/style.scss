@@ -51,7 +51,7 @@
       scrollbar-width: none;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
-      
+
       &::-webkit-scrollbar {
         display: none;
       }
@@ -246,3 +246,4 @@
     }
   }
 }
+ 
