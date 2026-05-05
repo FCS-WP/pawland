@@ -1,6 +1,8 @@
-.wp-block-ai-zippy-child-page-hero {
-    &.page-hero {
-        background: #2d5a27;
+// Editor preview styles for Page Hero block
+// The outer wrapper carries the block class
+.wp-block-ai-zippy-pc-page-hero {
+    // Outer wrapper - background controlled via inline style
+    .page-hero {
         color: #fff;
         padding: 4rem 2rem;
         border-radius: 40px;
@@ -16,7 +18,7 @@
             opacity: 0.1;
             pointer-events: none;
             color: #fff;
-            
+
             svg {
                 width: 300px;
                 height: 300px;
@@ -42,6 +44,16 @@
             font-size: 1.1rem;
             line-height: 1.6;
             opacity: 0.9;
+            color: #fff;
+        }
+
+        // Make RichText editable areas visible
+        .block-editor-rich-text__editable {
+            &:focus {
+                outline: 2px dashed rgba(255, 255, 255, 0.5);
+                outline-offset: 4px;
+                border-radius: 4px;
+            }
         }
     }
 }
